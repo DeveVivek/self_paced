@@ -44,7 +44,6 @@ void merge(int *arr, int s, int e)
     }
 }
 
-
 void mergeSort(int *arr , int s , int e){
     if(s>=e){
         return;
