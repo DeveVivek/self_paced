@@ -46,4 +46,3 @@ int main()
     major(arr, n);
     return 0;
 }
-
