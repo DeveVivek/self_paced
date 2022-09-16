@@ -14,7 +14,7 @@ void arrSum(int arr[3][3], int row, int col)
             maxi = max(maxi, sum);
             cout << sum << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
     // return maxi;
     cout << maxi;
