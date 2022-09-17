@@ -91,6 +91,51 @@ void print(Node *&head)
     cout << endl;
 }
 
+void deleteNode(int position , Node* &head){
+    //deleting first or start node
+    if(position==1){
+        Node* temp = head;
+        head = head->next;
+        //memory free start node
+        temp->next == NULL;
+        delete temp;
+    }
+    else{
+        //deleting any middle or last node
+        Node* curr = head;
+        Node* prev = NULL;
+
+        int count = 1;
+        while(count<position){
+            prev = curr;
+            curr = curr -> next;
+            count++;
+        }
+        prev -> next = curr->next;
+        curr->next=NULL;
+        delete curr;
+    }
+}
+
+bool isCircularList(Node* head) {
+    //empty list
+    if(head == NULL) {
+        return true;
+    }
+
+    Node* temp = head -> next;
+    while(temp != NULL && temp != head ) {
+        temp = temp -> next;
+    }
+
+    if(temp == head ) {
+        return true;
+    }
+
+    return false;
+}
+
+
 int main()
 {
     Node *node1 = new Node(10);
@@ -113,6 +158,9 @@ int main()
 
     cout << "head " << head->data << endl;
     cout << "tail " << tail->data << endl;
+
+    deleteNode(3, head);
+    print(head);
 
     return 0;
 }
