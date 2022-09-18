@@ -19,7 +19,7 @@ int power(int a, int b)
     }
     return ans;
 }
-  
+
 int main()
 {
     int a, b;
