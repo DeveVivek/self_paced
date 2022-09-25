@@ -19,6 +19,6 @@ bool search(int arr[3][3], int row, int col, int target)
 int main()
 {
     int arr[][3] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    cout<<search(arr, 3, 3, 4);
+    cout << search(arr, 3, 3, 4);
     return 0;
 }
