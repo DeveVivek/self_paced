@@ -30,18 +30,22 @@ public:
     {
         top--;
     }
-    int getSize(){
-        return top+1;;
-        //return this->size
+    int getSize()
+    {
+        return top + 1;
+        ;
+        // return this->size
     }
-    bool isEmpty(){
-        if(top==-1)
+    bool isEmpty()
+    {
+        if (top == -1)
             return true;
         else
             return false;
     }
-    int getTop(){
-        if(top!=-1)
+    int getTop()
+    {
+        if (top != -1)
             return arr[top];
         else
             return -1;
@@ -50,16 +54,16 @@ public:
 
 int main()
 {
-    Stack* st = new Stack(5);
+    Stack *st = new Stack(5);
     st->push(3);
     st->push(5);
     st->push(6);
     st->push(7);
     st->push(9);
-    cout<<st->getSize()<<endl;
+    cout << st->getSize() << endl;
     st->pop();
     st->pop();
     st->pop();
-    cout<<st->getSize()<<endl;
+    cout << st->getSize() << endl;
     return 0;
 }
